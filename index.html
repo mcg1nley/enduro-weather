@@ -54,7 +54,9 @@
             const listItem = document.createElement("li");
             const para = document.createElement("p");
             if (validFileType(file)) {
-              para.textContent = `File name: ${file.name} selected.`;
+              para.textContent = `File name: ${
+                file.name
+              } selected. File size: ${returnFileSize(file.size)}`;
               const image = document.createElement("img");
               image.src = "images/gpx-thumbnail.png"; //* URL.createObjectURL(file) */;
 
