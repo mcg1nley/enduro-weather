@@ -4,15 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>enduro weather</title>
     <style>
       img {
         height: 25px;
         width: 25px;
       }
+      li {
+        list-style: none;
+      }
     </style>
   </head>
   <body>
+
+    <!-- Get File from User -->
     <form action="">
       <div class="">
         <label for="gpx_upload">Please upload your GPX file</label>
@@ -21,11 +26,13 @@
       <div class="preview">
         <p>No file currently selected</p>
       </div>
+
+      <!-- Submit Button -->
       <div class="">
         <button>Submit</button>
       </div>
     </form>
-
+    
     <script>
       const input = document.querySelector("input");
       const preview = document.querySelector(".preview");
@@ -54,9 +61,9 @@
             const listItem = document.createElement("li");
             const para = document.createElement("p");
             if (validFileType(file)) {
-              para.textContent = `File name: ${
-                file.name
-              } selected. File size: ${returnFileSize(file.size)}`;
+              para.textContent = `File name: ${file.name} selected.\r
+
+              File size: ${returnFileSize(file.size)}`;
               const image = document.createElement("img");
               image.src = "images/gpx-thumbnail.png"; //* URL.createObjectURL(file) */;
 
